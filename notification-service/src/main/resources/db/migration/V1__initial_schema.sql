@@ -1,0 +1,2 @@
+-- TODO: implement a valid schema migration for this service before starting it.
+-- Include database constraints and indexes that enforce domain invariants.

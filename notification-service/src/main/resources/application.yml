@@ -1,0 +1,25 @@
+server:
+  port: 8084
+spring:
+  application:
+    name: notification-service
+  datasource:
+    url: jdbc:postgresql://localhost:5432/notification_db
+    username: ecommerce_user
+    password: ecommerce_local_password
+  jpa:
+    open-in-view: false
+    hibernate:
+      ddl-auto: validate
+  flyway:
+    enabled: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    consumer:
+      group-id: notification-service
+      auto-offset-reset: earliest
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info,metrics,prometheus
